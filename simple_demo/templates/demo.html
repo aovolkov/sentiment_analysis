@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+	<meta charset="UTF-8">
+	<meta name="description" content="Aleksander Volkov">
+	<meta name="keywords" content="machine_learning, data_science, sentiment_analysis, ml, ds">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>Sentiment Analysis Demo</title>
+
+</head>
+
+<form action="{{ url_for('index_page') }}" method=post>
+    <dl>
+        <dt>Type/paste an example of a review:<br>
+        <dd><textarea name=text rows=5 cols=40>{{ text }}</textarea>
+        <dd><input type=submit value="Analysis">
+    </dl>
+</form>
+
+    <br><b>Sentiment prediction:</b><br>
+{{ prediction_message }}
+</html>
